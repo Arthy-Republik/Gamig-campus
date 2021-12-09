@@ -22,12 +22,20 @@ nav{
   font-weight: bold;
   font-family:"Montserrat-Medium";
   width: 100%;
+  
 }
 
 nav ul {
 display: flex;
 justify-content: center;
+position: relative;
 }
+.nav ul::before { 
+  content: ="";
+  position: absolute;
+  height:3px;
+  width:5px%;
+  background: black;}
 
 nav li{
   border-left: 1px ;
@@ -35,6 +43,17 @@ nav li{
   padding: 25px 25px 25px 25px;
   text-align: center;
 }
+
+nav li {
+  transition: background-color .5s;
+}
+
+nav li:hover {
+  background-color:rgba(160, 52, 44, 0.562);
+  border-radius: 20px;
+}
+
+
 .FR {
   background: grey;rgb(172, 172, 172)
   border: solid;
@@ -44,6 +63,10 @@ nav li{
  
 }
 
+.FR:hover {
+  background-color: rgba(160, 52, 44, 0.562);
+  transform: scale(1.1)
+}
  
 .main-1  { 
 
@@ -75,6 +98,10 @@ h2 {
    font-family:"Montserrat-Medium" ;
    padding: 10px 10px 10px 10px ;
 }
+.button-1:hover{
+  background-color: rgba(160, 52, 44, 0.562);
+  transform: scale(1.1)
+}
 .text-1 {
   text-align: center;
   font-family:"Montserrat-Medium" ;
@@ -90,16 +117,15 @@ h2 {
 
 .box-1 {
   display: flex;
-  justify-content: space-around;
- margin: auto;
- padding-left: 120px;
- padding-right: 50px;
-padding-top: 80px;
-padding-bottom: 80px;
+  justify-content: space-evenly;
+ margin: 0 auto;
+ background: black;
+ padding-bottom: 100px;
+ padding-top: 100px;
+
 }
 
 .box-1 > div {
-  width: 50%;
   padding-bottom: 40px;
   font-family:"Montserrat-Medium" ;
   position: relative;
@@ -124,14 +150,18 @@ padding-bottom: 80px;
   left: 40px;
  
 }
+.box-1 button:hover {
+  background-color: rgba(160, 52, 44, 0.562);
+  transform: scale(1.1)
+}
  .media {
   background: rgb(238, 238, 238);
 
 }
 .news {
   display: flex;
-  justify-content: space-around;
   flex-wrap: wrap;
+  margin: 0 auto;
  padding-top: 40px;
  padding-bottom: 40px; 
  padding-left: 0px;
@@ -141,17 +171,29 @@ padding-bottom: 80px;
 .news div {
   padding-left: 40px;
   font-family:"Montserrat-Medium" ;
+  margin-left:50px ;
 }
-.news button{
-  border: 2px, solid;
-  margin-left: 120px;
-  
-}
+.news button {
+  margin: 5px auto;
+  background: none;
+  border: solid 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+ color :rgb(0, 0, 0);
+ font-family:"Montserrat-Medium" ;
+ padding: 10px 10px 10px 10px ;
+  }
+
+  .news button:hover {
+    background-color: rgba(160, 52, 44, 0.562);
+    transform: scale(1.1);
+    border-radius: 10px;
+  }
 
 .box-2 {
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
   margin: 0 auto;
   padding: 40px 10px;
 }
@@ -169,6 +211,7 @@ padding-bottom: 80px;
 }
 .box-2 h5 {
   font-family: "Montserrat-Medium";
+  font-size: 1.2rem;
 }
 
 .box-2 p {
@@ -178,8 +221,14 @@ padding-bottom: 80px;
 .link {
   position: absolute;
   bottom: 0;
-}
+  font-size: 1.2rem;
+  font-family:"Montserrat-Medium";
+  font-weight: bold ;
+  text-decoration: none ;
+  letter-spacing: 4px;
+  }
 
+}
   #footer-up {
   padding:0px;
     }
@@ -194,7 +243,6 @@ padding-bottom: 80px;
   }
 
 .box-3 div {
-
     font-family:"Montserrat-Medium" ;
     text-align: left;
     padding: 0px;
@@ -202,7 +250,7 @@ padding-bottom: 80px;
 
 .mid-ul {
 line-height: 30px;
-margin: 0;
+margin: 0 auto;
 padding: 0px;
   }
 
@@ -212,12 +260,12 @@ padding: 0px;
 }
 
 hr {
+  padding-bottom: 50px;
   border: none;
-  border-top: 1px double #333;
-  color: #333;
+  border-top: 5px double #333;
   overflow: visible;
   text-align: center;
-  width: 60%;
+  width: 40%;
   height: 2px;
 }
 
@@ -231,8 +279,10 @@ hr {
 }
 .follow { font-weight: bold;}
 
-.logo-RS {display: flex;
-  justify-content: space-around;
+.logo-RS {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
   padding-left: 0px;
 
 }
@@ -240,20 +290,18 @@ hr {
   font-family:"Montserrat-medium";
 }
 
-.section footer-mid 
-{ display: flex;
+.section footer-mid {
+  display: flex;
   justify-content: space-between;
-  padding-top:50px;
+  
 }
 
 #speakabout {
   display: flex;
-align-items: baseline;
+justify-content: space-between;
+align-items:center;
+width: 50%;
 }
-.Speakabout-h4 {
-  margin: auto;
-}
-
 
 .footer-bottom {
   background:black;
@@ -273,23 +321,84 @@ align-items: baseline;
 
 /* **************** RESPONSIVE *************** */
 
-@media (max-width: 700px) {
+@media (max-width: 1024px)
+{ body
+   {
+font-size:80%;
+} 
+.h1{
+  font-size: 80%;
+}
+.h2 {
+  font-size: 80%;
+}
+.h3{
+  font-size: 80%;
+}
+.h4 {
+  font-size: 80%;
+}
+.h5{
+  font-size: 80%;
+}
+.h6{
+  font-size: 80%;
+}
+.nav {
+ font-size:80%;
+ padding: auto;
+ margin: auto;
+}
+.img { max-width: 100%; }
+}
+.footer-bottom {
+  flex-wrap: wrap;
+  width:auto;
+ }}
+
+@media (max-width: 600px) 
+{
   header {
-    display: none;
-  } }
-  @media (max-width: 700px) {
-     .box-1{ flex-direction: column ;}
+    display: none;} 
+  }
+  @media (max-width: 600px) {
+    .text-1 { 
+    width: auto;
+    text-align: justify;
+    padding-left: 20px;
+    padding-right: 20px;}
+  
+    .box-1{ 
+      flex-wrap:wrap ;
+      flex-direction: column ;
+      align-content: space-around;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      }
     .news  {
       flex-direction: column;
     }
-  .box-2 {flex-direction: column;}}
+    .box-2 {
+      flex-wrap:wrap ;
+     flex-direction: column ;
+     align-content: space-around;
+     padding-top: 10px;
+     padding-bottom: 10px;}}
 
-  @media (max-width: 700px) {
+@media (max-width: 600px) {
     .box-3 {
       display: none;
     } }
 
-    @media (max-width: 700px) {
+@media (max-width: 600px) {
       .footer-mid {
         display: none;
-      } }
+      }
+      .footer-bottom {
+       flex-wrap: wrap;
+       width: auto;
+      }
+      .hr {
+        display:hidden;
+      }
+     }
