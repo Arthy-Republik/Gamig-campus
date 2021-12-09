@@ -9,12 +9,11 @@
 
 * {
   list-style: none;
- 
- 
 }
 
 body{ background: white;
   max-width: 1800px;
+  margin: 0;
 }
   
 
@@ -51,6 +50,7 @@ nav li {
 nav li:hover {
   background-color:rgba(160, 52, 44, 0.562);
   border-radius: 20px;
+  cursor: pointer;
 }
 
 
@@ -66,6 +66,7 @@ nav li:hover {
 .FR:hover {
   background-color: rgba(160, 52, 44, 0.562);
   transform: scale(1.1)
+  cursor: pointer;
 }
  
 .main-1  { 
@@ -100,7 +101,9 @@ h2 {
 }
 .button-1:hover{
   background-color: rgba(160, 52, 44, 0.562);
-  transform: scale(1.1)
+  transform: scale(1.1);
+  cursor: pointer;
+
 }
 .text-1 {
   text-align: center;
@@ -108,6 +111,7 @@ h2 {
   font-weight: bold;
   padding-top: 30px;
   padding-bottom: 30px;
+  margin: 0 auto;
 }
 .menu-2 {
   background: black;
@@ -122,6 +126,7 @@ h2 {
  background: black;
  padding-bottom: 100px;
  padding-top: 100px;
+ text-align: center;
 
 }
 
@@ -137,22 +142,24 @@ h2 {
 }
 .box-1 button {
   margin: 5px auto;
-    background: none;
-    border: solid 1px;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-   color :white;
-   font-family:"Montserrat-Medium" ;
-   padding: 10px 10px 10px 10px ;
+  background: none;
+  border: solid 1px;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color :white;
+  font-family:"Montserrat-Medium" ;
+  padding: 10px 10px 10px 10px ;
   position: absolute;
-  bottom: 0;
-  left: 40px;
+  transform: translateX(-50%);
  
 }
 .box-1 button:hover {
   background-color: rgba(160, 52, 44, 0.562);
-  transform: scale(1.1)
+  transform: scale(1.1);
+  position: absolute;
+  transform: translateX(-50%);
+  cursor:pointer;
 }
  .media {
   background: rgb(238, 238, 238);
@@ -189,6 +196,7 @@ h2 {
     background-color: rgba(160, 52, 44, 0.562);
     transform: scale(1.1);
     border-radius: 10px;
+    cursor: pointer;
   }
 
 .box-2 {
@@ -259,16 +267,6 @@ padding: 0px;
   justify-content: space-evenly;
 }
 
-hr {
-  padding-bottom: 50px;
-  border: none;
-  border-top: 5px double #333;
-  overflow: visible;
-  text-align: center;
-  width: 40%;
-  height: 2px;
-}
-
 .right-h4{
   line-height: 30px;
   text-align: left;
@@ -288,6 +286,7 @@ hr {
 }
 .speakabout { 
   font-family:"Montserrat-medium";
+  margin: 0 auto;
 }
 
 .section footer-mid {
@@ -301,6 +300,7 @@ hr {
 justify-content: space-between;
 align-items:center;
 width: 50%;
+margin: 0 auto;
 }
 
 .footer-bottom {
@@ -316,16 +316,22 @@ width: 50%;
 .sponsors {
   display: flex;
   justify-content: space-around;
+  align-items:center;
+  width: 90%;
+  margin: 0 auto;
   padding-bottom: 20px;
 }
 
 /* **************** RESPONSIVE *************** */
 
-@media (max-width: 1024px)
-{ body
-   {
-font-size:80%;
-} 
+@media (max-width: 1000px)
+{
+  * {
+  font-size:95%;
+  border-image-width: auto;
+}
+header ul {
+  display: none;}
 .h1{
   font-size: 80%;
 }
@@ -349,25 +355,26 @@ font-size:80%;
  padding: auto;
  margin: auto;
 }
-.img { max-width: 100%; }
+.img { max-width: 90%; }
+
+#speakabout {
+  flex-wrap:wrap ;
+  margin: 0 auto;
 }
-.footer-bottom {
+.sponsors {
   flex-wrap: wrap;
   width:auto;
- }}
-
-@media (max-width: 600px) 
-{
-  header {
-    display: none;} 
-  }
+  margin left :20px;
+  margin right: 20px;
+}}
+ 
   @media (max-width: 600px) {
     .text-1 { 
     width: auto;
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;}
-  
+    .logo-GC {width:60%;}
     .box-1{ 
       flex-wrap:wrap ;
       flex-direction: column ;
@@ -383,7 +390,17 @@ font-size:80%;
      flex-direction: column ;
      align-content: space-around;
      padding-top: 10px;
-     padding-bottom: 10px;}}
+     padding-bottom: 10px;}
+    .box-2 > div {
+      width: 70%;
+    }
+    .button {
+      padding-bottom: 20px;
+    }
+    .link{
+    padding-bottom: 20px;
+    font-size:90%;
+  }}
 
 @media (max-width: 600px) {
     .box-3 {
@@ -395,10 +412,14 @@ font-size:80%;
         display: none;
       }
       .footer-bottom {
+        padding-top: 50px;
+        padding-right: 20px;
+        
        flex-wrap: wrap;
        width: auto;
       }
-      .hr {
-        display:hidden;
+      .bottom-h4 {
+        display: none;
       }
+     
      }
