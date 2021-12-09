@@ -27,20 +27,16 @@ nav{
 nav ul {
 display: flex;
 justify-content: center;
-position: relative;
+
 }
-.nav ul::before { 
-  content: ="";
-  position: absolute;
-  height:3px;
-  width:5px%;
-  background: black;}
 
 nav li{
   border-left: 1px ;
   font-size: 0.8rem;
   padding: 25px 25px 25px 25px;
   text-align: center;
+  width: 100%;
+  margin-right: 60px;
 }
 
 nav li {
@@ -59,6 +55,7 @@ nav li:hover {
   border: solid;
   font-size: 0.8rem;
   text-transform: uppercase;
+  letter-spacing:5px;
   border-radius: 10px;
  
 }
@@ -109,8 +106,8 @@ h2 {
   text-align: center;
   font-family:"Montserrat-Medium" ;
   font-weight: bold;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom:50px;
   margin: 0 auto;
 }
 .menu-2 {
@@ -324,6 +321,15 @@ margin: 0 auto;
 
 /* **************** RESPONSIVE *************** */
 
+@media (max-width: 1200px) {
+#speakabout {
+  flex-wrap:wrap ;
+  margin: 0 auto;
+}
+header ul {
+  marging:0 auto;
+  }}
+
 @media (max-width: 1000px)
 {
   * {
@@ -357,10 +363,7 @@ header ul {
 }
 .img { max-width: 90%; }
 
-#speakabout {
-  flex-wrap:wrap ;
-  margin: 0 auto;
-}
+
 .sponsors {
   flex-wrap: wrap;
   width:auto;
@@ -374,7 +377,9 @@ header ul {
     text-align: justify;
     padding-left: 20px;
     padding-right: 20px;}
+    
     .logo-GC {width:60%;}
+
     .box-1{ 
       flex-wrap:wrap ;
       flex-direction: column ;
@@ -382,21 +387,26 @@ header ul {
       padding-top: 10px;
       padding-bottom: 10px;
       }
+
     .news  {
       flex-direction: column;
     }
+
     .box-2 {
       flex-wrap:wrap ;
      flex-direction: column ;
      align-content: space-around;
      padding-top: 10px;
      padding-bottom: 10px;}
+
     .box-2 > div {
       width: 70%;
     }
+
     .button {
       padding-bottom: 20px;
     }
+
     .link{
     padding-bottom: 20px;
     font-size:90%;
@@ -413,8 +423,7 @@ header ul {
       }
       .footer-bottom {
         padding-top: 50px;
-        padding-right: 20px;
-        
+        padding-right: 30px;
        flex-wrap: wrap;
        width: auto;
       }
