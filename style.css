@@ -14,6 +14,7 @@
 body{ background: white;
   max-width: 1800px;
   margin: 0;
+
 }
   
 
@@ -21,13 +22,13 @@ nav{
   font-weight: bold;
   font-family:"Montserrat-Medium";
   width: 100%;
+  margin: 0 auto;
   
 }
 
 nav ul {
 display: flex;
 justify-content: center;
-
 }
 
 nav li{
@@ -35,8 +36,6 @@ nav li{
   font-size: 0.8rem;
   padding: 25px 25px 25px 25px;
   text-align: center;
-  width: 100%;
-  margin-right: 60px;
 }
 
 nav li {
@@ -154,8 +153,7 @@ h2 {
 .box-1 button:hover {
   background-color: rgba(160, 52, 44, 0.562);
   transform: scale(1.1);
-  position: absolute;
-  transform: translateX(-50%);
+  position: relative;
   cursor:pointer;
 }
  .media {
@@ -233,7 +231,11 @@ h2 {
   letter-spacing: 4px;
   }
 
+a { 
+  text-decoration: none;
+  color: blue;
 }
+
   #footer-up {
   padding:0px;
     }
@@ -326,35 +328,20 @@ margin: 0 auto;
   flex-wrap:wrap ;
   margin: 0 auto;
 }
-header ul {
-  marging:0 auto;
-  }}
+.sponsors { 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+ padding: 20px 20px 20px 20px ;
+}}
 
+
+ }
 @media (max-width: 1000px)
 {
   * {
-  font-size:95%;
+  font-size:80%;
   border-image-width: auto;
-}
-header ul {
-  display: none;}
-.h1{
-  font-size: 80%;
-}
-.h2 {
-  font-size: 80%;
-}
-.h3{
-  font-size: 80%;
-}
-.h4 {
-  font-size: 80%;
-}
-.h5{
-  font-size: 80%;
-}
-.h6{
-  font-size: 80%;
 }
 .nav {
  font-size:80%;
@@ -364,12 +351,15 @@ header ul {
 .img { max-width: 90%; }
 
 
-.sponsors {
-  flex-wrap: wrap;
-  width:auto;
-  margin left :20px;
-  margin right: 20px;
-}}
+}
+
+@media (max-width: 900px) {
+  header ul {
+    display: none;
+ 
+  } 
+
+}
  
   @media (max-width: 600px) {
     .text-1 { 
@@ -414,21 +404,15 @@ header ul {
 
 @media (max-width: 600px) {
     .box-3 {
-      display: none;
-    } }
-
-@media (max-width: 600px) {
+      display: none;}
+      
+   
+@media (max-width: 600px)
+ {
       .footer-mid {
         display: none;
       }
-      .footer-bottom {
-        padding-top: 50px;
-        padding-right: 30px;
-       flex-wrap: wrap;
-       width: auto;
-      }
+
       .bottom-h4 {
         display: none;
       }
-     
-     }
